@@ -1,14 +1,14 @@
 # Coke Zero—Common Ground
 
-A React archive inspired by a family disagreement: my dad prefers Coke Zero and I prefer Diet Coke. Explore 15 Coca-Cola Company sodas, search their ingredients, filter by brand/flavor/sweetener, sort by nutrition or verified release year, save a personal collection, and use arrow buttons to rearrange the archive. Select two drinks to highlight shared ingredients and compare nutrition at the label serving size or a calculated 12 fl oz serving; the optional contribution form adds a soda to the current session.
+A React archive about a family debate over Coke Zero and Diet Coke. It displays photos and ingredient lists for 15 Coca-Cola Company drinks. Use the brand dropdown to see one brand at a time. The comparison section shows shared and unique ingredients for any two drinks.
 
 ## Setup
 
-Run `npm ci`, then `npm run dev`. Run `npm run build` to create `dist`, or `npm exec vite preview` to preview that build. React `useState` holds products, their order, filters, comparison choices, and the collection. Data lives in `src/products.js`; reusable product art and contribution components are in `src/Library.jsx`. Session changes reset on refresh. Release years without verified sources remain unknown and sort last.
+Run `npm ci`, then `npm run dev`. Run `npm run build` to create the production site. The `Library` component uses `useState` for the dropdown, `filter()` to pick the matching drinks, and `map()` to render the cards. The drink data is in `src/products.js`, and all styles are in `src/style.css`, with landing settings under the Landing page comment.
 
 ## Sources and process
 
-Product data was checked against Coca-Cola's US pages on November 4, 2026. Ingredient names are standardized for comparison (for example, preservative purpose notes are omitted); the linked official labels provide full wording. Identical ingredient names do not establish identical recipes or amounts. Nutrition is stored at the source's serving size; normalization is calculated and can introduce rounding. The introduction expresses a personal opinion about health, rather than an archive finding.
+Product data was checked against Coca-Cola's US pages on November 4, 2026. The archive uses shortened ingredient names. The linked official labels provide full wording.
 
 - [Coca-Cola Original, Caffeine Free, and Mexico](https://www.coca-cola.com/us/en/brands/coca-cola/products/original)
 - [Coca-Cola Zero Sugar](https://www.coca-cola.com/us/en/brands/coca-cola/products/zero)
@@ -17,9 +17,11 @@ Product data was checked against Coca-Cola's US pages on November 4, 2026. Ingre
 - [Sprite](https://www.coca-cola.com/us/en/brands/sprite/products)
 - [Fanta](https://www.coca-cola.com/us/en/brands/fanta/products)
 
-Product photographs were supplied by the student in the CokeImages folder. Products without a matching photograph use a CSS can illustration. DM Sans and Playfair Display are served by Google Fonts, with local system-font fallbacks. Community entries are marked as unverified.
+The archive uses product photographs from the student's CokeImages folder and official packshots from the Coca-Cola product pages linked above.
 
-OpenAI Codex assisted with React implementation, CSS design, organizing source data, documentation, and build verification. Prompts included the assignment brief, the title “Coke Zero-Common Ground,” the family-debate introduction, and requests for filters by flavor, branding, sweeteners, nutrition, release date, and common/different ingredients. Review the data and code before submission and personalize the design and explanation as appropriate.
+OpenAI Codex assisted with React implementation, CSS design, organizing source data, documentation, and build verification. Prompts included the assignment brief, the title “Coke Zero-Common Ground,” the family-debate introduction, and a request to simplify the project to one brand filter and a still can. Review the data and code before submission and personalize the design and explanation as appropriate.
+
+The landing page displays the supplied cola-can model using [React Bits Model Viewer](https://reactbits.dev/components/model-viewer). The viewer is in `src/ModelViewer.jsx`, and the can settings are in `src/CanPreview.jsx`. See `REACT-BITS-LICENSE` for the viewer license.
 
 ## GitHub Pages
 

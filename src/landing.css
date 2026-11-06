@@ -1,0 +1,91 @@
+.landing {
+  --landing-background: #000;
+  --landing-text: #fff;
+  --landing-muted: #c8c8c8;
+  --landing-accent: #ff6666;
+  --landing-button: #bc2929;
+  --landing-title-size: clamp(3rem, 9vw, 9rem);
+  --landing-padding: clamp(1.25rem, 5vw, 5rem);
+  --landing-stage-height: clamp(27rem, 74svh, 49rem);
+  --landing-model-width: min(100%, 50rem);
+
+  background: var(--landing-background);
+  color: var(--landing-text);
+  text-align: center;
+}
+
+/* The model and heading share the same grid cell to create the overlap. */
+.landing-stage {
+  position: relative;
+  display: grid;
+  min-height: var(--landing-stage-height);
+  place-items: center;
+  isolation: isolate;
+}
+
+.landing-model,
+.landing-heading {
+  grid-area: 1 / 1;
+}
+
+.landing-model {
+  display: block;
+  width: var(--landing-model-width);
+  height: var(--landing-stage-height);
+  pointer-events: none;
+}
+
+.landing-heading {
+  z-index: 1;
+  padding: 1rem var(--landing-padding);
+}
+
+.landing-heading .eyebrow {
+  color: var(--landing-accent);
+  text-transform: uppercase;
+}
+
+.landing-heading h1 {
+  margin: 0;
+  font-size: var(--landing-title-size);
+  letter-spacing: -0.06em;
+  text-shadow:
+    0 2px 20px #000,
+    0 2px 4px #000;
+}
+
+.landing-heading h1 span {
+  display: block;
+}
+
+.landing-rotation {
+  position: absolute;
+  z-index: 2;
+  right: var(--landing-padding);
+  bottom: 1rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #777;
+  border-radius: 0.25rem;
+  background: var(--landing-background);
+  color: var(--landing-text);
+  font-size: 0.75rem;
+}
+
+.landing-intro {
+  padding: 0 var(--landing-padding) var(--landing-padding);
+}
+
+.landing-intro p {
+  max-width: 36rem;
+  margin: 0 auto 1.5rem;
+  color: var(--landing-muted);
+  line-height: 1.7;
+}
+
+.landing .primary {
+  background: var(--landing-button);
+}
+
+.landing :focus-visible {
+  outline-color: var(--landing-text);
+}
