@@ -17,9 +17,9 @@ Product data was checked against Coca-Cola's US pages on November 4, 2026. The a
 - [Sprite](https://www.coca-cola.com/us/en/brands/sprite/products)
 - [Fanta](https://www.coca-cola.com/us/en/brands/fanta/products)
 
-The archive uses product photographs from the student's CokeImages folder and official packshots from the Coca-Cola product pages linked above.
+The archive uses product photographs from the CokeImages folder and official packshots from the Coca-Cola product pages linked above.
 
-OpenAI Codex assisted with React implementation, CSS design, organizing source data, documentation, and build verification. Prompts included the assignment brief, the title “Coke Zero-Common Ground,” the family-debate introduction, and a request to simplify the project to one brand filter and a still can. Review the data and code before submission and personalize the design and explanation as appropriate.
+OpenAI Codex assisted with React implementation, CSS design, organizing source data, documentation, and build verification. Prompts included the assignment brief, the title “Coke Zero-Common Ground,” the family-debate introduction.
 
 The landing page displays the supplied cola-can model using [React Bits Model Viewer](https://reactbits.dev/components/model-viewer). The viewer is in `src/ModelViewer.jsx`, and the can settings are in `src/CanPreview.jsx`. See `REACT-BITS-LICENSE` for the viewer license.
 
